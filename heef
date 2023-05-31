@@ -1,0 +1,15 @@
+!unzip fruits.zip
+import tensorflow as tf
+import matplotlib.pyplot as pltimg_height, img_width = 32, 32
+batch_size = 20
+
+train_ds = tf.keras.utils.image_dataset_from_directory(
+    "fruits/train",
+    image_size = (img_height, img_width),
+    batch_size = batch_size
+)
+test_ds = tf.keras.utils.image_dataset_from_directory(
+    "fruits/test",
+    image_size = (img_height, img_width),
+    batch_size = batch_size
+)
